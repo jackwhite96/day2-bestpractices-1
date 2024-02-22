@@ -57,9 +57,9 @@ class GameRunner:
 
             if prompt.lower() == 'y' or prompt == '':
                 continue
-            elif prompt.lower() == 'n':
+            elif prompt.lower() == 'n': # added so you can end your misery
             	print('Bye, have a beautiful time!')
                 quit()
-            else:
+            else: # you must conform to y or n!!!
                 print("That was not an option... let's play again.")
                 continue
