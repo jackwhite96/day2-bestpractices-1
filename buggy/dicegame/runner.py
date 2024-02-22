@@ -23,8 +23,9 @@ class GameRunner:
         # Probably counts wins or something.
         # Great variable name, 10/10.
         c = 0
+        runner = cls() # moving reset out of while loop, initialise class
         while True:
-            runner = cls()
+            runner.dice = Die.create_dice(5) # re-rolling the dice for each run
 
             print("Round {}\n".format(runner.round))
 
@@ -57,6 +58,7 @@ class GameRunner:
             if prompt.lower() == 'y' or prompt == '':
                 continue
             elif prompt.lower() == 'n':
+            	print('Bye, have a beautiful time!')
                 quit()
             else:
                 print("That was not an option... let's play again.")
